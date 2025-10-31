@@ -52,8 +52,8 @@ function MyService() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // Délai entre chaque enfant (0.2s)
-        delayChildren: 0.3, // Délai initial pour la grille
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
       },
     },
   };
@@ -70,7 +70,7 @@ function MyService() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-white to-purple-300 bg-clip-text text-transparent">
           My <span className="text-purple-500">Services</span>
         </h1>
         <div className="w-24 h-1 bg-purple-500 mx-auto rounded-full"></div>

@@ -7,7 +7,7 @@ function Home() {
     <div className="flex flex-col items-center justify-center px-4 py-8 sm:px-6 md:px-8 md:mb-6 lg:px-16 min-h-screen">
       <div className="flex flex-col lg:flex-row items-center lg:items-start lg:gap-16 w-full max-w-6xl">
         <div className="flex-1 text-center lg:text-left mb-8 lg:mb-0">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-linear-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
             Hi, I'm <span className="text-[#A855F7]">...</span>
           </h1>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-custom-white mb-4 sm:mb-6 leading-tight">

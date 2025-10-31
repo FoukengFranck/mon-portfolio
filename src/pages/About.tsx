@@ -17,15 +17,6 @@ function About() {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
-    },
-  };
-
   const buttonVariants = {
     hover: {
       scale: 1.05,
@@ -55,7 +46,7 @@ function About() {
           initial="hidden"
           animate="visible"
         >
-          <motion.div className="flex-shrink-0" variants={itemVariants}>
+          <motion.div className="shrink-0">
             <img
               src="/profil.png"
               alt="Foukeng Kemayou"
@@ -63,7 +54,7 @@ function About() {
             />
           </motion.div>
 
-          <motion.div className="flex-1 max-w-lg" variants={itemVariants}>
+          <motion.div className="flex-1 max-w-lg">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
               {getGreeting()}, je suis{" "}
               <span className="text-purple-500">Foukeng Kemayou</span>
