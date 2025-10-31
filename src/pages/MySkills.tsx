@@ -1,14 +1,23 @@
+import "./MySkills.css";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiCanva, SiFigma, SiAdobephotoshop } from "react-icons/si";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import type { IconType } from "react-icons"; // Ajout pour typer les icônes
+
+type Skill = {
+  icon: IconType;
+  title: string;
+  description: string;
+  iconColor: string;
+};
 
 function MySkills() {
   const [currentTab, setCurrentTab] = useState<"dev" | "graphic">("dev");
 
-  const devSkills = [
+  const devSkills: Skill[] = [
     {
       icon: FaHtml5,
       title: "HTML",
@@ -46,7 +55,7 @@ function MySkills() {
     },
   ];
 
-  const graphicSkills = [
+  const graphicSkills: Skill[] = [
     {
       icon: SiCanva,
       title: "Canva",
@@ -97,33 +106,6 @@ function MySkills() {
     },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      },
-    },
-    hover: {
-      scale: 1.05,
-      y: -10,
-      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
-      transition: { duration: 0.3 },
-    },
-  };
-
-  const iconVariants = {
-    hover: {
-      rotate: 360,
-      scale: 1.1,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-  };
-
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center py-12">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -161,13 +143,11 @@ function MySkills() {
             return (
               <motion.div
                 key={index}
-                className="text-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center text-center h-64 transition-all duration-300"
-                variants={cardVariants}
+                className="text-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center text-center h-64 transition-all duration-300 skill-group"
                 whileHover="hover"
               >
                 <motion.div
                   className="mb-4 p-3 bg-white/20 rounded-full"
-                  variants={iconVariants}
                   whileHover="hover"
                 >
                   <IconComponent color={skill.iconColor} className="w-8 h-8" />
