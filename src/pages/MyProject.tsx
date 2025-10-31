@@ -48,7 +48,7 @@ function MyProject() {
       description: "Site vitrine présentant mes projets et compétences.",
       image: "/portfolio.png",
       tech: ["React", "TailwindCSS"],
-      github: "https://github.com/user/luxury-offers",
+      github: "https://github.com/FoukengFranck/mon-portfolio.git",
       category: "Portfolio",
     },
     {
