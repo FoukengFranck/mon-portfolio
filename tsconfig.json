@@ -1,4 +1,5 @@
 {
+  // Removed "$schema" property to avoid schema loading errors
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
